@@ -1,3 +1,73 @@
 [gd_scene format=3 uid="uid://bwyuigvnjy33c"]
 
+[ext_resource type="Script" uid="uid://dtgcohiwaqfck" path="res://scripts/enemy.gd" id="1_7p1mj"]
+[ext_resource type="Texture2D" uid="uid://dctta5osy46om" path="res://assets/images/robot000.png" id="2_w8i8w"]
+[ext_resource type="Texture2D" uid="uid://0js18o5hlgd0" path="res://assets/images/robot001.png" id="3_otmr2"]
+[ext_resource type="Texture2D" uid="uid://b812vo2st7vm8" path="res://assets/images/robot002.png" id="4_wtq4b"]
+[ext_resource type="Texture2D" uid="uid://ecenaj0g2mc6" path="res://assets/images/robot003.png" id="5_j0cyh"]
+[ext_resource type="Texture2D" uid="uid://cav0c0w5wru2f" path="res://assets/images/robot004.png" id="6_g0wcc"]
+[ext_resource type="Texture2D" uid="uid://2maj1x17so06" path="res://assets/images/robot010.png" id="7_s1ycm"]
+[ext_resource type="Texture2D" uid="uid://di8f0kojc0hpm" path="res://assets/images/robot011.png" id="8_shcg2"]
+[ext_resource type="Texture2D" uid="uid://hnrvsg6xe65j" path="res://assets/images/robot012.png" id="9_ile5s"]
+[ext_resource type="Texture2D" uid="uid://ccd8iofdra7uh" path="res://assets/images/robot013.png" id="10_1x4g4"]
+[ext_resource type="Texture2D" uid="uid://c431w7a2aob" path="res://assets/images/robot014.png" id="11_2pwtc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rogs8"]
+size = Vector2(75, 75)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wrm80"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_w8i8w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_otmr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_wtq4b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_j0cyh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_g0wcc")
+}],
+"loop": true,
+"name": &"move_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_s1ycm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_shcg2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ile5s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_1x4g4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_2pwtc")
+}],
+"loop": true,
+"name": &"move_right",
+"speed": 5.0
+}]
+
 [node name="Enemy" type="CharacterBody2D" unique_id=89121403]
+script = ExtResource("1_7p1mj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=901692086]
+shape = SubResource("RectangleShape2D_rogs8")
+
+[node name="RayCast2D" type="RayCast2D" parent="CollisionShape2D" unique_id=1393520225]
+collide_with_areas = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=912716444]
+sprite_frames = SubResource("SpriteFrames_wrm80")
+animation = &"move_right"
+frame_progress = 0.10850044

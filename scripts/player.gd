@@ -4,6 +4,7 @@ const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 const bubble = preload("res://scenes/bubble.tscn")
 const Bubble = preload("res://scripts/bubble.gd")
+var bubbles: Array[Bubble] = []
 var main
 var last_direction: float = 1.0
 var ray: RayCast2D
@@ -51,15 +52,20 @@ func _physics_process(delta: float) -> void:
 
 	if ray.is_colliding():
 		var collider = ray.get_collider()
-		print(collider)
 		if collider is Bubble:
 			collider._on_death_timer_end()
+			if not bubbles.is_empty():
+				for b in bubbles:
+					if b != null:
+						b._on_death_timer_end()
+				bubbles = []
 
 	if Input.is_action_just_pressed("fire"):
 		var bubble_instance: Bubble = bubble.instantiate()
+		bubbles.append(bubble_instance)
 		main.add_child(bubble_instance)
 		bubble_instance.position = Vector2(
-			position.x + (last_direction * 50),
+			position.x + (last_direction * 100),
 			position.y
 		)
 

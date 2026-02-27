@@ -36,3 +36,16 @@
 		[ ] player gains points
 	[ ] HUD shows *score* and *lives/health*
 	[ ] When player loses all lives/health → Game Over screen with restart
+
+## Bonus Features
+[x] Chain reaction: popping one bubble pops nearby bubbles
+[x] Enemy “rage” escape: trapped enemy escapes after N seconds, moves faster
+[ ] Power-up fruit: random drop from popped trapped enemy
+[ ] Boss enemy after all enemies defeated
+[ ] High-score persistence (save/load best score)
+
+## Known Bugs & Limitations
+- Jumping on enemies pushes them through the floor.
+
+## How To Run
+...

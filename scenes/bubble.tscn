@@ -23,6 +23,14 @@
 [ext_resource type="Texture2D" uid="uid://bdfjj7lkvj6io" path="res://assets/images/trap05.png" id="21_1dix7"]
 [ext_resource type="Texture2D" uid="uid://cft47w3wewrkp" path="res://assets/images/trap06.png" id="22_w3u0c"]
 [ext_resource type="Texture2D" uid="uid://bhy4k50y05xca" path="res://assets/images/trap07.png" id="23_2dyuy"]
+[ext_resource type="Texture2D" uid="uid://cuy5wu8if0kcr" path="res://assets/images/trap10.png" id="24_diqrr"]
+[ext_resource type="Texture2D" uid="uid://7woolbpsyjva" path="res://assets/images/trap11.png" id="25_uaj05"]
+[ext_resource type="Texture2D" uid="uid://bt5iguqxusvt7" path="res://assets/images/trap12.png" id="26_jg8tk"]
+[ext_resource type="Texture2D" uid="uid://chml6uy5fsbpo" path="res://assets/images/trap13.png" id="27_ah1xf"]
+[ext_resource type="Texture2D" uid="uid://cpfe6t31xk5r" path="res://assets/images/trap14.png" id="28_vpn5g"]
+[ext_resource type="Texture2D" uid="uid://rgamdo4ka3v6" path="res://assets/images/trap15.png" id="29_ylfic"]
+[ext_resource type="Texture2D" uid="uid://dst52wvnooxa4" path="res://assets/images/trap16.png" id="30_1uice"]
+[ext_resource type="Texture2D" uid="uid://dhl11pu84gngq" path="res://assets/images/trap17.png" id="31_yrn1y"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6jlkr"]
 radius = 37.5
@@ -115,7 +123,36 @@ animations = [{
 "texture": ExtResource("23_2dyuy")
 }],
 "loop": true,
-"name": &"trap",
+"name": &"trap0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_diqrr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_uaj05")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_jg8tk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_ah1xf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_vpn5g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_ylfic")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_1uice")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_yrn1y")
+}],
+"loop": true,
+"name": &"trap1",
 "speed": 5.0
 }]
 
@@ -127,7 +164,7 @@ shape = SubResource("CircleShape2D_6jlkr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=555305608]
 sprite_frames = SubResource("SpriteFrames_ejcp0")
-animation = &"trap"
+animation = &"trap1"
 
 [node name="DeathTimer" type="Timer" parent="." unique_id=990458110]
 wait_time = 2.0

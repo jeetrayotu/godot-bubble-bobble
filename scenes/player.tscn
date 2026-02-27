@@ -115,6 +115,7 @@ script = ExtResource("1_3vyb7")
 shape = SubResource("RectangleShape2D_dqkch")
 
 [node name="RayCast2D" type="RayCast2D" parent="CollisionShape2D" unique_id=851335093]
+hit_from_inside = true
 collide_with_areas = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1429093673]

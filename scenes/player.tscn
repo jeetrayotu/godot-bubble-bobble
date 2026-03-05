@@ -6,16 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://cna4ni4qe3msq" path="res://assets/images/fall0.png" id="2_qhqgy"]
 [ext_resource type="Texture2D" uid="uid://d10034q3w8qfh" path="res://assets/images/fall1.png" id="3_dqkch"]
 [ext_resource type="Texture2D" uid="uid://dhbifh45bs3fi" path="res://assets/images/blow1.png" id="3_qfm1y"]
-[ext_resource type="Texture2D" uid="uid://bngqcn1y2yv2w" path="res://assets/images/run00.png" id="4_3v2ag"]
 [ext_resource type="Texture2D" uid="uid://0nim3uxw3agg" path="res://assets/images/jump0.png" id="4_f1ej7"]
-[ext_resource type="Texture2D" uid="uid://sc1jew6v2grs" path="res://assets/images/run01.png" id="5_jej6c"]
 [ext_resource type="Texture2D" uid="uid://i6rdvtq6j42l" path="res://assets/images/jump1.png" id="5_oprun"]
-[ext_resource type="Texture2D" uid="uid://dlumndbcirxf6" path="res://assets/images/run02.png" id="6_f1ej7"]
-[ext_resource type="Texture2D" uid="uid://b5a5fyqk63dqh" path="res://assets/images/run03.png" id="7_oprun"]
-[ext_resource type="Texture2D" uid="uid://nhpyh2y8swji" path="res://assets/images/run10.png" id="8_a8ls1"]
-[ext_resource type="Texture2D" uid="uid://xajd5f0tcy51" path="res://assets/images/run11.png" id="9_qfm1y"]
-[ext_resource type="Texture2D" uid="uid://cu8i42272pnsb" path="res://assets/images/run12.png" id="10_fulsm"]
-[ext_resource type="Texture2D" uid="uid://d5f58yob7wsb" path="res://assets/images/run13.png" id="11_4r5pv"]
+[ext_resource type="Texture2D" uid="uid://cfyo1cjklrm1u" path="res://assets/ai-images/run0.png" id="8_y4r1p"]
+[ext_resource type="Texture2D" uid="uid://y53ho0dbbhax" path="res://assets/ai-images/run1.png" id="12_jej6c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dqkch"]
 size = Vector2(75, 75)
@@ -67,16 +61,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_3v2ag")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_jej6c")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_f1ej7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_oprun")
+"texture": ExtResource("8_y4r1p")
 }],
 "loop": true,
 "name": &"run_left",
@@ -84,16 +69,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("8_a8ls1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_qfm1y")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_fulsm")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_4r5pv")
+"texture": ExtResource("12_jej6c")
 }],
 "loop": true,
 "name": &"run_right",
@@ -120,4 +96,4 @@ collide_with_areas = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1429093673]
 sprite_frames = SubResource("SpriteFrames_qlg0r")
-animation = &"blow_left"
+animation = &"run_right"
